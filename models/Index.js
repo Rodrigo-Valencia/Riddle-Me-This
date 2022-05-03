@@ -1,0 +1,1 @@
+//  { Model, DataTypes } = require('sequelize');

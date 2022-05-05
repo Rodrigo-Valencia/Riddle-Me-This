@@ -25,6 +25,7 @@ app.post('/api/riddles', (req, res) => {
 
     const result = Joi.validate(req.body, schema);
     console.log(result);
+    
     if (!req.body.name || req.body.name.length < 3) {
         //400 bad request
         res.status(400).send('Answer is require to continue.');

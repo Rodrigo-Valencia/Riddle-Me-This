@@ -1,20 +1,5 @@
 const router = require('express').Router();
-const riddleRoutes = require('./riddleRoutes');
-
-router.use('/riddles', riddleRoutes);
-
-module.exports = router;
-
-
-
-
-
-
-
-
-
 const Joi = require('joi');
-const express = require('express');
 const app = express();
 
 app.use(express.json());

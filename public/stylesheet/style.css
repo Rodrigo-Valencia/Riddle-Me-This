@@ -27,14 +27,7 @@ button:hover {
     background-color: greenyellow;
 }
 
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
+
 
 header {
     border-bottom: 1px solid #ccc;
@@ -70,12 +63,4 @@ main {
 .logoutbtn:hover {
     background: none;
     color: black;
-}
-
-footer {
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
 }

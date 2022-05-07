@@ -1,6 +1,6 @@
-async function logOut() {
+const logOut = async () => {
     const response = await fetch('/api/users/logout', {
-        method: 'post',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json' 
         }
@@ -10,7 +10,7 @@ async function logOut() {
         document.location.replace('/');
     }
     else {
-        alert(response.statusText);
+        alert('Log Out Failed!');
     }
 }
 

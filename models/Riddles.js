@@ -8,8 +8,6 @@ Riddles.init(
     riddle_queue: {
       type: DataTypes.STRING,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
     },
   },
   {

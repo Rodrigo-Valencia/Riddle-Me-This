@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Answers,
-          attributes: ['answers'],
+          attributes: ['answers_queue'],
         },
       ],
     });
@@ -38,8 +38,8 @@ router.get('/riddles/:id', withAuth, async (req, res) => {
         {
           model: Answers,
           attributes: [
-            'id',
-            'answers',
+            'riddle_id',
+            'answers_queue',
           ],
         },
       ],

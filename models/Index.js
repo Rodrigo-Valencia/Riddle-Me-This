@@ -1,9 +1,9 @@
 //  { Model, DataTypes } = require('sequelize');
-const Questions = require('./Riddles');
+const Riddles = require('./Riddles');
 const Answers = require('./Answers')
 
-Answers.belongsTo(Questions, {
-    foreignKey: "questions_id"
+Answers.belongsTo(Riddles, {
+    foreignKey: "riddles_id"
 })
 
 
@@ -16,6 +16,6 @@ Answers.belongsTo(Questions, {
 
 
 module.exports = {
-    Questions,
+    Riddles,
     Answers,
 };

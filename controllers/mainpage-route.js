@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Riddles, Answers } = require('../models');
 // Import the custom middleware
-const withAuth = require('../utils/auth');
+const withAuth = require('../utils/authorize');
 
 // GET all riddles for homepage
 router.get('/', async (req, res) => {

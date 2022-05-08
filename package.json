@@ -14,10 +14,12 @@
     "start": "node server.js"
   },
   "name": "riddle-me-this",
-  "description": "\"Riddle Game\"",
+  "description": "Riddle Game",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^28.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rodrigo-Valencia/Riddle-Me-This.git"
@@ -26,7 +28,7 @@
     "Riddle",
     "Batman"
   ],
-  "author": ["Hector Palacios", "Rodrigo Valencia", "Alvin Badillo", "Michael Ramos"],
+  "author": "Hector Palacios <paquito1981@outlook.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Rodrigo-Valencia/Riddle-Me-This/issues"

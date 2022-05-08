@@ -1,40 +1,71 @@
-<div class="row justify-space-between-md">
-  <div class="login-card">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="login-card">
-    <h2 class="page-title">Signup</h2>
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="username-signup">Username:</label>
-        <input class="form-input" type="text" id="username-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
+<div id="loginPage">
+    <div class="container">
+        <div class="form-group col-8" id="loginBtn">
+            {{!-- login / signup buttons --}}
+            <button type="button" class="btn btn-primary" id="signup">Sign Up Here</button>
+            <button type="button" class="btn btn-primary" id="login">Login</button>
+
+            <div class="modal" tabindex="-2" role="dialog" id="loginScreen">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Login</h3>
+                            <button type="button" class="exit" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username-login">
+                                <div class="form-group" id="password-section">
+                                    <label for="password">Password</label>
+                                    <input type="text" class="form-control" id="password-login">
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="loginBtn">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" tabindex="-1" role="dialog" id="create-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Create account</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="create-username" aria-describedby="emailHelp">
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="create-password">
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="create-button">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8 offset-3">
+            <h1>{{test}}</h1>
+            <h2>Answer These Riddles!</h2>
+            <h3 id="loggedInAs"></h3>
+            <div class="clearfix mb-4 row">
+                <p id="startHere">START</p>
+                <button id="startBtn" class="btn btn-primary float-right">START</button>
+            </div>
+            <p>TEST TEST</p>
+        </div>
+    </div>
 </div>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../public/javascript/login.js"></script>

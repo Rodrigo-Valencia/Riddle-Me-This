@@ -1,21 +1,18 @@
-//  { Model, DataTypes } = require('sequelize');
-const Questions = require('./Riddles');
-const Answers = require('./Answers')
+const User = require('./User');
+const Answers = require('./Answers');
+const Riddles = require('./Riddles');
 
-Answers.belongsTo(Questions, {
-    foreignKey: "questions_id"
-})
+Riddles.hasMany(Answers, {
+    foreignKey: 'riddles_id',
+});
 
-
-
-
-
-
-
-
+Answers.belongsTo(Riddles, {
+    foreignKey: "riddles_id"
+});
 
 
 module.exports = {
-    Questions,
+    User,
+    Riddles,
     Answers,
 };

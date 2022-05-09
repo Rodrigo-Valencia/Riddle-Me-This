@@ -42,6 +42,6 @@ res.send(question);
 });
 
 //PORT
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5555;
 
-app.listen(3000), () => console.log('Listening on port ${port}...')
+app.listen(5555), () => console.log('Listening on port ${port}...')

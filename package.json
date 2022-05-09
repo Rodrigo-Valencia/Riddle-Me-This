@@ -16,7 +16,7 @@
     "seed": "node seeds/index.js"
   },
   "name": "riddle-me-this",
-  "description": "\"Riddle Game\"",
+  "description": "Riddle Game",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
@@ -27,12 +27,7 @@
     "Riddle",
     "Batman"
   ],
-  "author": [
-    "Hector Palacios",
-    "Rodrigo Valencia",
-    "Alvin Badillo",
-    "Michael Ramos"
-  ],
+  "author": ["Hector Palacios", "Rodrigo Valencia", "Alvin Badillo", "Michael Ramos"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Rodrigo-Valencia/Riddle-Me-This/issues"

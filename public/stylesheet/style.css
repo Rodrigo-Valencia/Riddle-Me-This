@@ -12,6 +12,28 @@ body, html {
     color: greenyellow;
 }
 
+a {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: greenyellow;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+    margin-left: 16px;
+}
+
+a:hover {
+    background-color: greenyellow;
+    color: greenyellow;
+}
+
+p {
+    margin-left: 16px;
+}
+
 button {
     background-color: black;
     border: 0;
@@ -27,26 +49,20 @@ button:hover {
     background-color: greenyellow;
 }
 
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
+
 
 header {
     border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1%;
+    /* padding: 0 1%; */
 
 }
 
 header h1 {
     color: greenyellow;
+    margin-left: 16px;
 }
 
 main {
@@ -70,12 +86,4 @@ main {
 .logoutbtn:hover {
     background: none;
     color: black;
-}
-
-footer {
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
 }

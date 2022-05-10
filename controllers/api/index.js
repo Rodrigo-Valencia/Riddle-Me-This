@@ -1,7 +1,18 @@
-const app = require('express')();
-const PORT = 3001;
+const router = require('express').Router();
 
-app.listen(
-    PORT,
-    () => console.log(`it's alive on http://localhost:${PORT}`)
-)
+const userRoutes = require('./user-routes');
+// const riddleRoutes = require('./riddleRoutes');
+
+// router.use('/riddles', riddleRoutes);
+router.use('/users', userRoutes);
+
+module.exports = router;
+
+
+
+
+
+
+
+
+

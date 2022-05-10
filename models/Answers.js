@@ -1,13 +1,12 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-class Answers extends Model {}
+class Answers extends Model {} 
 
 Answers.init(
   {
-    //primary key
-    id: {
-      type: DataTypes.STRING,
+    riddle_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
@@ -16,22 +15,12 @@ Answers.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    //foreign key
-    riddles_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "Riddles",
-        key: "id",
-      },
-    },
   },
   {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "Answers",
+    modelName: 'answers',
   }
 );
 

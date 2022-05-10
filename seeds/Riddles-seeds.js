@@ -3,7 +3,7 @@ const { Riddles } = require("../models");
 const riddlesData = [
   {
     riddle_queue:
-      'I can start a war or end one. I can give you the strength of heroes or leave you powerless. I might be snared with a glance, but no foce can compel me to stay. What am I?',
+      'I can start a war or end one. I can give you the strength of heroes or leave you powerless. I might be snared with a glance, but no force can compel me to stay. What am I?',
   },
   {
     riddle_queue:

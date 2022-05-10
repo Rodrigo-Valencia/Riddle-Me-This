@@ -87,3 +87,7 @@ main {
     background: none;
     color: black;
 }
+
+input {
+    background-color: white;
+}

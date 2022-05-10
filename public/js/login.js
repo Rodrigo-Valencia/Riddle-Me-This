@@ -48,8 +48,8 @@ const signUpHandler = async (event) => {
   }
 }
   
-document.querySelector('#loginForm').addEventListener('submit',(e) => {
+document.querySelector('#loginForm').addEventListener('click',(e) => {
   loginHandler (e);
 });
-document.querySelector('#signupForm').addEventListener('submit', signUpHandler);
+document.querySelector('#signupForm').addEventListener('click', signUpHandler);
 

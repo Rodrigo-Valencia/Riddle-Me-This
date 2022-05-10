@@ -27,7 +27,9 @@
     "Riddle",
     "Batman"
   ],
-  "author": ["Hector Palacios", "Rodrigo Valencia", "Alvin Badillo", "Michael Ramos"],
+  "author": "Hector Palacios", 
+   
+  
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Rodrigo-Valencia/Riddle-Me-This/issues"

@@ -69,12 +69,14 @@ router.get('/answers/:id', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+  console.log("Test login route")
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
 
   res.render('login');
+
 });
 
 module.exports = router;

@@ -80,19 +80,19 @@ header h1 {
     overflow: hidden;
     border-right: 3px solid;
     /* font-family: monospace; */
-  }
+}
   
-  @keyframes typing {
+@keyframes typing {
     from {
       width: 0
     }
-  }
+}
       
-  @keyframes blink {
+@keyframes blink {
     50% {
       border-color: transparent
     }
-  }
+}
 
 main {
     flex: 1;
@@ -120,4 +120,31 @@ main {
 
 input {
     background-color: white;
+}
+
+.riddles {
+    justify-content: space-around;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 20px 50px;
+    border: 3px solid greenyellow;
+    border-radius: 10px;
+}
+
+.riddles:hover {
+    animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 0 25px orange, 0 0 50px red;
+        
+    }
+}
+
+.answers {
+    text-align: center;
+    font-size: 50px;
+
 }

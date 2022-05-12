@@ -19,9 +19,10 @@
 
     <nav>
         <a href="/">Home</a>
-        
         {{#if loggedIn}}
-        <button id="logout" class="logoutbtn">logout</button>
+        <button id="logOut" class="logoutbtn">Logout</button>
+        <p>"YOU ARE SIGNED IN"</p>
+        
         {{else}}
         <a href="/login">Login</a>
         {{/if}}

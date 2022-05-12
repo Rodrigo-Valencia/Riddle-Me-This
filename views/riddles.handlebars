@@ -1,3 +1,5 @@
-{{#each riddles as |riddle_queue|}}
-{{> riddle-details}}
-{{/each}}
+<section class="container">
+  {{#each riddles.answers as |answers|}}
+  {{> answer-details}}
+  {{/each}}
+</section>

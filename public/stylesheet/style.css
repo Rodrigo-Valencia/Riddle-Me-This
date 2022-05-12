@@ -2,13 +2,15 @@
     box-sizing: border-box;
     background-color: black;
     font-size: large;
+    font-family: 'Matrix' sans-serif;
 }
 
 body, html {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: Courier;
+    /* font-family: Courier; */
+    font-family: 'Matrix', sans-serif;
     color: greenyellow;
 }
 
@@ -45,6 +47,7 @@ button {
     transition: background-color .1s;
     cursor: pointer;
     border-radius: 5px;
+    font-family: 'Matrix' sans-serif;
 }
 
 button:hover {
@@ -65,6 +68,7 @@ header {
 header h1 {
     color: greenyellow;
     margin-left: 16px;
+    font-family: 'Matrix' sans-serif;
 }
 
 .wrapper {
@@ -74,12 +78,13 @@ header h1 {
     place-items: center;
   }
 .typing {
-    width: 19ch;
+    width: 22ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     /* font-family: monospace; */
+    font-family: 'Matrix' sans-serif;
 }
   
 @keyframes typing {
@@ -103,11 +108,13 @@ main {
     width: 1000px;
     word-wrap: break-word;
     margin: 0 auto;
-    font-family: 'Source Code Pro', SourceCodeProLight, Arial, Monospace;
+    font-family: 'Matrix' sans-serif;
+    /* font-family: 'Source Code Pro', SourceCodeProLight, Arial, Monospace; */
     font-size: 30px;
     font-weight: 300;
     line-height: 42px;
     color: greenyellow;
+    font-family: 'Matrix' sans-serif;
   }
 
   .answers {

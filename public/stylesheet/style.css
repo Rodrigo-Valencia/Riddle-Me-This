@@ -110,6 +110,17 @@ main {
     color: greenyellow;
   }
 
+  .answers {
+    width: 1000px;
+    word-wrap: break-word;
+    margin: 0 auto;
+    font-family: 'Source Code Pro', SourceCodeProLight, Arial, Monospace;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 42px;
+    color: greenyellow;
+  }  
+
 .logoutbtn {
     background: none;
     border: none;

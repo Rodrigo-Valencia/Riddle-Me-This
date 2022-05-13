@@ -20,3 +20,14 @@
   Alvin Badillo, Rodrigo Valencia, Michael Ramos, Hector Palacios
 
 ## Screenshot
+
+This image show the login imformation and sign up information to be able to play the game.
+
+
+
+
+## Links
+
+Github Link: https://github.com/Rodrigo-Valencia/Riddle-Me-This.git
+
+Deployed link:

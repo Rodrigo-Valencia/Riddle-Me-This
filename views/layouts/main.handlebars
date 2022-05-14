@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheet/style.css">
+    <link href="http://fonts.cdnfonts.com/css/matrix" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
+    <title>Riddle Me This</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+        <h1 class="typing">Riddle Me This "?"</h1>
+        </div>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        {{#if loggedIn}}
+        <button id="logOut" class="logoutbtn">Logout</button>
+        <p>"YOU ARE SIGNED IN"</p>
+        
+        {{else}}
+        <a href="/login">Login</a>
+        <div id="line_01" class="textrabbit">
+            PLEASE SIGN IN OR CREATE AN ACCOUNT TO PLAY
+        </div>
+            <script type="text/javascript">
+    function Randomiser(el, count, delay) {
+  this.element = el;
+  this.originalText = el.textContent || el.innerText || '';
+  this.places = [];
+  this.currentText = [];
+  this.count = count || 1;   // iterations before fixing a character
+  this.delay = delay || 100; // milliseconds between updates
+  this.iteration = 0;
+  this.startTime = new Date();
+
+  var i = this.originalText.length;
+
+  while (i--) {
+    this.places[i] = [i];
+  }
+}
+
+Randomiser.prototype.randomise = function() {
+  var charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var i = this.places.length;
+
+  while (i--) {
+    this.currentText[this.places[i]] = charSet.charAt((Math.random() * charSet.length) | 0);
+  }
+  this.iteration += 1;
+}
+
+Randomiser.prototype.setContent = function() {
+  var t = this.currentText.join('');
+
+  if (typeof this.element.textContent == 'string') {
+    this.element.textContent = t;
+  } else {
+    this.element.innerText = t;
+  }
+}
+
+Randomiser.prototype.run = function() {
+  var n;
+  var temp = [];
+
+  // If first run, randomise to initiate
+  if (!this.iteration) {
+    this.randomise();
+  }
+
+  // If there are places left
+  if (this.places.length) {
+
+    // If reached count, randomly remove one place and set its character
+    // to the original value
+    if (!(this.iteration % this.count)) {
+      n = this.places.splice((Math.random() * this.places.length|0), 1)[0];
+      this.currentText[n] = this.originalText.charAt(n);
+    }
+
+    // Randomise the string and call itself
+    this.randomise(); 
+    this.setContent();
+    var randomiser = this;
+    setTimeout(function(){randomiser.run();}, this.delay); 
+  }
+  // If no places left, end
+}
+
+// Kick it off
+var lineOne = new Randomiser(document.getElementById('line_01'));
+lineOne.run();
+    </script>
+        {{/if}}
+        
+    </nav>
+    <main>
+        {{{ body }}}
+    </main>
+    {{#if loggedIn}}
+
+    <script src="/javascript/logout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"
+    ></script>
+    {{/if}}
+</body>
+
+</html>

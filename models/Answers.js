@@ -1,20 +1,28 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Answers extends Model {}
+class Answers extends Model {} 
 
 Answers.init(
   {
-    riddle_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    answers_queue: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    riddles_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'riddles',
+        key: 'id',
+      },
+    },
+    
   },
   {
     sequelize,

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Riddles, Answers } = require('../models');
 // Import the custom middleware
-const withAuth = require('../utils/auth');
+const withAuth = require('../utils/authorize');
 
 // GET all riddles for homepage
 router.get('/', async (req, res) => {
@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Answers,
-          attributes: ['answers'],
+          // attributes: ['title'],
         },
       ],
     });
@@ -39,7 +39,7 @@ router.get('/riddles/:id', withAuth, async (req, res) => {
           model: Answers,
           attributes: [
             'id',
-            'answers',
+            'title',
           ],
         },
       ],
@@ -69,12 +69,14 @@ router.get('/answers/:id', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+  console.log("Test login route")
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
 
   res.render('login');
+
 });
 
 module.exports = router;

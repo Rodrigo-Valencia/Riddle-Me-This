@@ -1,4 +1,4 @@
-const User = require('./user');
+const User = require('./User');
 const Answers = require('./Answers');
 const Riddles = require('./Riddles');
 
@@ -12,7 +12,7 @@ Answers.belongsTo(Riddles, {
 
 
 module.exports = {
-    User,
+    User: User,
     Riddles,
     Answers,
 };

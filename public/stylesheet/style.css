@@ -1,178 +1,169 @@
 * {
-    box-sizing: border-box;
-    background-color: black;
-    font-size: large;
-    font-family: 'Matrix' sans-serif;
+  box-sizing: border-box;
+  background-color: black;
+  font-size: large;
 }
 
-body, html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    /* font-family: Courier; */
-    font-family: 'Matrix', sans-serif;
-    color: greenyellow;
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Matrix', sans-serif;
+  color: greenyellow;
 }
 
 a {
-    background: black;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: greenyellow;
-    font-size: 100%;
-    font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
+  background: black;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: greenyellow;
+  font-size: 100%;
+  font-weight: bold;
+  transition: color 0.1s;
+  margin-left: 16px;
 }
 
 a:hover {
-    /* background-color: greenyellow; */
-    color: greenyellow;
-    color: rgb(76, 117, 54);
+  /* background-color: greenyellow; */
+  color: greenyellow;
+  color: rgb(76, 117, 54);
 }
 
-
 p {
-    margin-left: 16px;
+  margin-left: 16px;
+}
+
+.matrix-font {
+ font-family: 'Matrix' sans-serif; 
 }
 
 button {
-    background-color: black;
-    border: 0;
-    padding: 1%;
-    color: greenyellow;
-    font-weight: bold;
-    transition: background-color .1s;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: 'Matrix' sans-serif;
+  background-color: black;
+  border: 0;
+  padding: 1%;
+  color: greenyellow;
+  font-weight: bold;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 button:hover {
-    background-color: black;
+  animation: pulsate 1s ease-in-out;
 }
 
-
-
 header {
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 0 1%; */
-
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 1%; */
 }
 
 header h1 {
-    color: greenyellow;
-    margin-left: 16px;
-    font-family: 'Matrix' sans-serif;
+  color: greenyellow;
+  margin-left: 16px;
+  font-family: 'Matrix' sans-serif;
 }
 
 .wrapper {
-    
-    /*This part is important for centering*/
-    display: grid;
-    place-items: center;
-  }
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
 .typing {
-    width: 22ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    /* font-family: monospace; */
-    font-family: 'Matrix' sans-serif;
+  width: 24ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
 }
-  
+
 @keyframes typing {
-    from {
-      width: 0
-    }
+  from {
+    width: 0;
+  }
 }
-      
+
 @keyframes blink {
-    50% {
-      border-color: transparent
-    }
+  50% {
+    border-color: transparent;
+  }
 }
 
 main {
-    flex: 1;
-    padding: 2% 4%;
+  flex: 1;
+  padding: 2% 4%;
 }
 
 .textrabbit {
-    width: 1000px;
-    word-wrap: break-word;
-    margin: 0 auto;
-    font-family: 'Matrix' sans-serif;
-    /* font-family: 'Source Code Pro', SourceCodeProLight, Arial, Monospace; */
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 42px;
-    color: greenyellow;
-    font-family: 'Matrix' sans-serif;
-  }
-
-  .answers {
-    width: 1000px;
-    word-wrap: break-word;
-    margin: 0 auto;
-    font-family: 'Source Code Pro', SourceCodeProLight, Arial, Monospace;
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 42px;
-    color: greenyellow;
-  }  
-
-.logoutbtn {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: greenyellow;
-    font-size: 100%;
-    font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
-    font-family: Courier;
-}
-
-.logoutbtn:hover {
-    background: none;
-    color: rgb(76, 117, 54);
-}
-
-input {
-    background-color: white;
-}
-
-.riddles {
-    justify-content: space-around;
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    padding: 20px 50px;
-    border: 3px solid greenyellow;
-    border-radius: 10px;
-}
-
-.riddles:hover {
-    animation: pulsate 1s ease-in-out;
-}
-
-@keyframes pulsate {
-    0% {
-        box-shadow: 0 0 25px orange, 0 0 50px red;
-        
-    }
+  width: 1000px;
+  word-wrap: break-word;
+  margin: 0 auto;
+  font-family: 'Matrix' sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 42px;
+  color: greenyellow;
 }
 
 .answers {
+  width: 1000px;
+  word-wrap: break-word;
+  margin: 0 auto;
+  font-family: 'Matrix' sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 42px;
+  color: greenyellow;
+}
+
+.logoutbtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: greenyellow;
+  font-size: 100%;
+  font-weight: bold;
+  transition: color 0.1s;
+  margin-left: 16px;
+}
+
+.logoutbtn:hover {
+  background: none;
+  color: rgb(76, 117, 54);
+}
+
+input {
+  background-color: white;
+}
+
+.riddles {
+  justify-content: space-around;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 20px 50px;
+  border: 3px solid greenyellow;
+  border-radius: 10px;
+}
+
+.riddles:hover {
+  animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 25px orange, 0 0 50px red;
+  }
+}
+
+.answers  {
     text-align: center;
     font-size: 50px;
 

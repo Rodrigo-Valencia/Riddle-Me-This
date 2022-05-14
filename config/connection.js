@@ -2,14 +2,7 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 const sequelize = new Sequelize(
-    process.env.DB_NAME,
-    process.env.DB_USER,
-    process.env.DB_PASSWORD,
-    {
-        host: 'localhost',
-        dialect: 'mysql',
-        port: 3306,
-    }
+    'mysql://nvndth4bjksma9sz:l139shfz7dplamm2@eanl4i1omny740jw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/gar2th1s4qvk1929'
 );
 
 module.exports = sequelize;

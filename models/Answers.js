@@ -17,10 +17,10 @@ Answers.init(
     },
     riddles_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'riddles',
-        key: 'id',
-      },
+      // references: {
+      //   model: 'riddles',
+      //   key: 'id',
+      // },
     },
     
   },

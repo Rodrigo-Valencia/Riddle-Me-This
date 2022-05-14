@@ -1,19 +1,21 @@
 const router = require('express').Router();
 // const { Riddles, Answers } = require('../models');
-const Riddles = require('../models/Riddles');
-const Answers = require('../models/Answers');
+const Riddles = require('../models/Riddles.js');
+const Answers = require('../models/Answers.js');
 const withAuth = require('../utils/authorize');
 
 router.get('/', async (req, res) => {
   try {
-    const dbRiddlesData = await Riddles.findAll({
-      include: [
-        {
-          model: Answers,
-          // attributes: ['title'],
-        },
-      ],
-    });
+    const dbRiddlesData = await Riddles.findAll(
+    //   {
+    //   include: [
+    //     {
+    //       model: Answers,
+    //       // attributes: ['title'],
+    //     },
+    //   ],
+    // }
+    );
 
     const riddles = dbRiddlesData.map((riddles) =>
       riddles.get({ plain: true })

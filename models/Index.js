@@ -3,16 +3,16 @@ const Answers = require('./Answers');
 const Riddles = require('./Riddles');
 
 Riddles.hasMany(Answers, {
-    foreignKey: 'id',
+    foreignKey: 'riddles_id',
 });
 
 Answers.belongsTo(Riddles, {
-    foreignKey: "id"
+    foreignKey: "riddles_id"
 });
 
 
 module.exports = {
-    User: User,
+    User,
     Riddles,
     Answers,
 };

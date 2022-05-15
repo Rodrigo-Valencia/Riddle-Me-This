@@ -1,19 +1,21 @@
 const router = require('express').Router();
-const { Riddles, Answers } = require('../models');
-// Import the custom middleware
+// const { Riddles, Answers } = require('../models');
+const Riddles = require('../models/Riddles.js');
+const Answers = require('../models/Answers.js');
 const withAuth = require('../utils/authorize');
 
-// GET all riddles for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbRiddlesData = await Riddles.findAll({
+    const dbRiddlesData = await Riddles.findAll(
+      {
       include: [
         {
           model: Answers,
           // attributes: ['title'],
         },
       ],
-    });
+    }
+    );
 
     const riddles = dbRiddlesData.map((riddles) =>
       riddles.get({ plain: true })
@@ -29,8 +31,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET one riddle
-// Use the custom middleware before allowing the user to access the gallery
 router.get('/riddles/:id', withAuth, async (req, res) => {
   try {
     const dbRiddlesData = await Riddles.findByPk(req.params.id, {
@@ -53,8 +53,6 @@ router.get('/riddles/:id', withAuth, async (req, res) => {
   }
 });
 
-// GET one answer
-// Use the custom middleware before allowing the user to access the painting
 router.get('/answers/:id', withAuth, async (req, res) => {
   try {
     const dbAnswersData = await Answers.findByPk(req.params.id);

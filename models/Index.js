@@ -11,8 +11,4 @@ Answers.belongsTo(Riddles, {
 });
 
 
-module.exports = {
-    User,
-    Riddles,
-    Answers,
-};
+module.exports = { User, Riddles, Answers };

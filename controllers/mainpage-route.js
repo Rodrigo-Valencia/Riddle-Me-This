@@ -1,7 +1,7 @@
 const router = require('express').Router();
-// const { Riddles, Answers } = require('../models');
-const Riddles = require('../models/Riddles.js');
-const Answers = require('../models/Answers.js');
+const { Riddles, Answers } = require('../models');
+// const Riddles = require('../models/Riddles.js');
+// const Answers = require('../models/Answers.js');
 const withAuth = require('../utils/authorize');
 
 router.get('/', async (req, res) => {
